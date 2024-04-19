@@ -47,6 +47,8 @@ app.post("/login", async (req, res) => {
   try {
     // console.log("req", req);
     const { username, password } = req.body;
+    console.log({ ip: req.ip, body: req.body });
+
     const user = users.find(
       (user) => user.username === username && user.password === password
     );
@@ -59,8 +61,10 @@ app.post("/login", async (req, res) => {
         payload: payload,
         token: tokenGenerator(payload),
       };
+      console.log(response);
       res.json(response);
     } else {
+      console.log("Invalid credentials");
       res.status(401).json({ error: "Invalid credentials" });
     }
   } catch (error) {
