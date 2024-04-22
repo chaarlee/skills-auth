@@ -97,7 +97,7 @@
   },
   "components": {
     "schemas": {
-      "players": {
+      "users": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/login"

@@ -54,6 +54,7 @@ app.post("/login", async (req, res) => {
     );
     if (user) {
       const payload = {
+        id: user.id,
         name: user.name,
         role: user.role,
       };
