@@ -8,6 +8,12 @@
   "servers": [
     {
       "url": "http://localhost:4321/"
+    },
+    {
+      "url": "http://localhost:10100/"
+    },
+    {
+      "url": "http://auth.skills/"
     }
   ],
   "paths": {
